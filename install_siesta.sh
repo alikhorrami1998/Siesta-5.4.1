@@ -36,13 +36,17 @@ sudo apt install -y \
 echo "=== Downloading SIESTA 5.4.0 ==="
 wget https://gitlab.com/siesta-project/siesta/-/releases/5.4.0/downloads/siesta-5.4.0.tar.gz
 
-echo "=== Extracting archive ==="
-tar -xsf siesta-5.4.0.tar.gz
+echo "=== Extracting archive to /opt ==="
+sudo mkdir -p /opt/siesta-5.4.0
+sudo tar -xzf siesta-5.4.0.tar.gz -C /opt/siesta-5.4.0 --strip-components=1
 
-cd siesta-5.4.0
+echo "=== Removing archive ==="
+rm -f siesta-5.4.0.tar.gz
 
-echo "=== Creating build directory ==="
-mkdir -p build && cd build
+echo "=== Changing ownership to current user ==="
+sudo chown -R $USER:$USER /opt/siesta-5.4.0
+
+cd /opt/siesta-5.4.0
 
 echo "=== Running CMake ==="
 cmake .. \
@@ -67,4 +71,12 @@ make -j$(nproc)
 echo "=== Installing SIESTA ==="
 sudo make install
 
-echo "✅ SIESTA 5.4.0 installed successfully at $HOME/siesta-5.4.0-install"
+echo "=== Cleaning up script and source directory ==="
+cd ..
+rm -rf Siesta-5.4.0
+
+
+echo "✅ SIESTA 5.4.0 installed successfully 
+
+
+
