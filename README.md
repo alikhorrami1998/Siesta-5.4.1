@@ -52,9 +52,6 @@ This will automatically:
 
 
 
-📥 Download
-To install WSL and the Ubuntu 24.04 LTS distribution, please download the required files from the Releases section of this repository.
-
 
 📁 Files included in the Release:
 wsl.2.5.6.0.x64.msi – Installer for installing or updating Windows Subsystem for Linux (WSL)
