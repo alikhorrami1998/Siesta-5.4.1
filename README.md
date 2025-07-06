@@ -53,8 +53,5 @@ This will automatically:
 
 
 
-📁 Files included in the Release:
-wsl.2.5.6.0.x64.msi – Installer for installing or updating Windows Subsystem for Linux (WSL)
 
-CanonicalGroupLimited.Ubuntu_2404.1.68.0_neutral_._79rhkp1fndgsc.AppxBundle – Installation package for Ubuntu 24.04 (manual installation on Windows)
 
