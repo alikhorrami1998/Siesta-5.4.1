@@ -48,6 +48,9 @@ sudo chown -R $USER:$USER /opt/siesta-5.4.0
 
 cd /opt/siesta-5.4.0
 
+echo "=== Creating build directory ==="
+mkdir -p build && cd build
+
 echo "=== Running CMake ==="
 cmake .. \
   -DSIESTA_WITH_MPI=ON \
