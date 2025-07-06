@@ -79,7 +79,5 @@ cd ..
 rm -rf Siesta-5.4.0
 
 
-echo "✅ SIESTA 5.4.0 installed successfully 
-
 
 
