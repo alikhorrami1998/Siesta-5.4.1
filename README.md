@@ -20,24 +20,14 @@ Make sure your system is up-to-date and you are using a Debian/Ubuntu-based Linu
 
 ## ⚙️ How to Use
 
-### 1. Clone the Repository
+### Run the Installation
 
 ```bash
-git clone https://github.com/alikhorrami1998/Siesta-5.4.0.git
-cd Siesta-5.4.0
+bash <(curl -Ls https://raw.githubusercontent.com/alikhorrami1998/Siesta-5.4.0/refs/heads/main/install_siesta.sh)
 ```
 
-### 2. Make Script Executable
 
-```bash
-chmod +x install_siesta.sh
-```
 
-### 3. Run the Installation
-
-```bash
-./install_siesta.sh
-```
 
 This will automatically:
 
