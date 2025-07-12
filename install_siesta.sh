@@ -74,9 +74,6 @@ make -j$(nproc)
 echo "=== Installing SIESTA ==="
 sudo make install
 
-echo "=== Cleaning up script and source directory ==="
-cd ..
-rm -rf Siesta-5.4.0
 
 echo "✅ SIESTA installed successfully!"
 
