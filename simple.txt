@@ -1,0 +1,86 @@
+
+=== Updating system ===
+
+
+
+sudo apt update && sudo apt upgrade -y
+
+
+
+=== Installing dependencies ===
+
+
+sudo apt install -y \
+build-essential \
+checkinstall \
+cmake \
+gfortran \
+g++ \
+make \
+pkg-config \
+libxc-dev \
+libreadline-dev \
+libblas-dev \
+liblapack-dev \
+libfftw3-dev \
+libnetcdf-dev \
+libnetcdff-dev \
+libopenblas-dev \
+gnuplot \
+git \
+bison \
+flex
+
+
+
+=== Downloading SIESTA 5.4.0 ===
+wget https://gitlab.com/siesta-project/siesta/-/releases/5.4.0/downloads/siesta-5.4.0.tar.gz
+
+
+
+=== Extracting archive to /opt ===
+
+
+sudo mkdir -p /opt/siesta-5.4.0
+sudo tar -xzf siesta-5.4.0.tar.gz -C /opt/siesta-5.4.0 --strip-components=1
+
+
+
+=== Removing archive ===
+
+
+rm -f siesta-5.4.0.tar.gz
+
+
+
+=== Changing ownership to current user ===
+
+
+
+sudo chown -R $USER:$USER /opt/siesta-5.4.0
+
+cd /opt/siesta-5.4.0
+
+
+=== Creating build directory ===
+
+
+mkdir -p build && cd build
+
+
+
+=== Running CMake ===
+
+
+cmake .. 
+
+
+=== Building SIESTA ===
+
+make -j$(nproc)
+
+
+=== Installing SIESTA ===
+
+
+sudo make install
