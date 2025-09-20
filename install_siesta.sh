@@ -34,17 +34,17 @@ sudo apt install -y \
     flex
 
 echo "=== Downloading SIESTA 5.4.0 ==="
-wget https://gitlab.com/siesta-project/siesta/-/releases/5.4.0/downloads/siesta-5.4.0.tar.gz
+wget https://gitlab.com/siesta-project/siesta/-/releases/5.4.1/downloads/siesta-5.4.1.tar.gz
 
 echo "=== Extracting archive to /opt ==="
-sudo mkdir -p /opt/siesta-5.4.0
-sudo tar -xzf siesta-5.4.0.tar.gz -C /opt/siesta-5.4.0 --strip-components=1
+sudo mkdir -p /opt/siesta-5.4.1
+sudo tar -xzf siesta-5.4.1.tar.gz -C /opt/siesta-5.4.1 --strip-components=1
 
 echo "=== Removing archive ==="
-rm -f siesta-5.4.0.tar.gz
+rm -f siesta-5.4.1.tar.gz
 
 echo "=== Changing ownership to current user ==="
-sudo chown -R $USER:$USER /opt/siesta-5.4.0
+sudo chown -R $USER:$USER /opt/siesta-5.4.1
 
 cd /opt/siesta-5.4.0
 
