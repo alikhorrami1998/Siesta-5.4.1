@@ -46,7 +46,7 @@ rm -f siesta-5.4.1.tar.gz
 echo "=== Changing ownership to current user ==="
 sudo chown -R $USER:$USER /opt/siesta-5.4.1
 
-cd /opt/siesta-5.4.0
+cd /opt/siesta-5.4.1
 
 echo "=== Creating build directory ==="
 mkdir -p build && cd build
