@@ -73,9 +73,7 @@ cmake .. \
   -DSIESTA_WITH_IPO=ON \
  -DSIESTA_WITH_NCDF=ON \
  -DSIESTA_WITH_FFTW=ON \
- -DSIESTA_WITH_DFTD3=ON \
- -DSIESTA_WITH_CHESS=ON 
-
+ -DSIESTA_WITH_DFTD3=ON 
 
 echo "=== Building SIESTA ==="
 make -j$(nproc)
